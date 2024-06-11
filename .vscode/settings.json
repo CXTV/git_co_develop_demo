@@ -1,5 +1,7 @@
 {
     "python.analysis.extraPaths": [
         "./plugins"
-    ]
+    ],
+    "dbt.enableNewLineagePanel": true,
+    "dbt.queryLimit": 500
 }

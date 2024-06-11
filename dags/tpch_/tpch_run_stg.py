@@ -12,7 +12,7 @@ _default_args = {
 with DAG(
     dag_id = 'run_tpch',
     default_args= _default_args,
-    start_date = datetime(2024,2,3,1),
+    start_date = datetime(2024,6,3,1),
     schedule_interval = None
 ) as dag:
     
@@ -26,11 +26,5 @@ with DAG(
         dbt_command='dbt run -s stg_tpch_line_items.sql'
     )
     
-    task3 = DbtOperator(
-        task_id='run_fct_int_order_items',
-        dbt_command='dbt run -s stg_tpch_line_items.sql'
-    )
-
-
 
 task1 >> task2

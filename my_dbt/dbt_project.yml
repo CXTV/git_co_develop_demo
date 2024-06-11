@@ -37,5 +37,6 @@ models:
       materialized: view
       snowflake_warehouse: COMPUTE_WH
     marts:
+      +schema: public
       materialized: table
       snowflake_warehouse: COMPUTE_WH
