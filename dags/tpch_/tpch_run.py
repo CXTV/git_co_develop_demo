@@ -10,14 +10,27 @@ _default_args = {
 }
 
 with DAG(
-    dag_id = 'run_stagings',
+    dag_id = 'run_tpch',
     default_args= _default_args,
     start_date = datetime(2024,2,3,1),
     schedule_interval = None
 ) as dag:
+    
     task1 = DbtOperator(
-        task_id='run_tpch_orders',
-        dbt_command='run -s stg_tpch_orders.sql'
+        task_id='run_stg_tpch_orders',
+        dbt_command='dbt run -s stg_tpch_orders.sql'
+    )
+
+    task2 = DbtOperator(
+        task_id='run_stg_tpch_lineItems',
+        dbt_command='dbt run -s stg_tpch_line_items.sql'
     )
     
-task1
+    task3 = DbtOperator(
+        task_id='run_fct_int_order_items',
+        dbt_command='dbt run -s stg_tpch_line_items.sql'
+    )
+
+
+
+task1 >> task2
