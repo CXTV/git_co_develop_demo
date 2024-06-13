@@ -1,0 +1,156 @@
+version: 2
+
+models:
+  - name: fct_orders
+    description: ""
+    columns:
+      - name: order_key
+        data_type: number
+        description: ""
+
+      - name: order_date
+        data_type: date
+        description: ""
+
+      - name: customer_key
+        data_type: number
+        description: ""
+
+      - name: status_code
+        data_type: varchar
+        description: ""
+
+      - name: priority_code
+        data_type: varchar
+        description: ""
+
+      - name: clerk_name
+        data_type: varchar
+        description: ""
+
+      - name: ship_priority
+        data_type: number
+        description: ""
+
+      - name: order_count
+        data_type: number
+        description: ""
+
+      - name: gross_item_sales_amount
+        data_type: number
+        description: ""
+
+      - name: item_discount_amount
+        data_type: number
+        description: ""
+
+      - name: item_tax_amount
+        data_type: number
+        description: ""
+
+      - name: net_item_sales_amount
+        data_type: number
+        description: ""
+
+  - name: dim_order_items
+    description: ""
+    columns:
+      - name: order_item_key
+        data_type: varchar
+        description: ""
+
+      - name: order_key
+        data_type: number
+        description: ""
+
+      - name: customer_key
+        data_type: number
+        description: ""
+
+      - name: order_date
+        data_type: date
+        description: ""
+
+      - name: order_status_code
+        data_type: varchar
+        description: ""
+
+      - name: part_key
+        data_type: number
+        description: ""
+
+      - name: supplier_key
+        data_type: number
+        description: ""
+
+      - name: return_flag
+        data_type: varchar
+        description: ""
+
+      - name: line_number
+        data_type: number
+        description: ""
+
+      - name: order_item_status_code
+        data_type: varchar
+        description: ""
+
+      - name: ship_date
+        data_type: date
+        description: ""
+
+      - name: commit_date
+        data_type: date
+        description: ""
+
+      - name: receipt_date
+        data_type: date
+        description: ""
+
+      - name: ship_mode
+        data_type: varchar
+        description: ""
+
+      - name: extended_price
+        data_type: number
+        description: ""
+
+      - name: quantity
+        data_type: number
+        description: ""
+
+      - name: base_price
+        data_type: number
+        description: ""
+
+      - name: discount_percentage
+        data_type: number
+        description: ""
+
+      - name: discounted_price
+        data_type: number
+        description: ""
+
+      - name: gross_item_sales_amount
+        data_type: number
+        description: ""
+
+      - name: discounted_item_sales_amount
+        data_type: number
+        description: ""
+
+      - name: item_discount_amount
+        data_type: number
+        description: ""
+
+      - name: tax_rate
+        data_type: number
+        description: ""
+
+      - name: item_tax_amount
+        data_type: number
+        description: ""
+
+      - name: net_item_sales_amount
+        data_type: number
+        description: ""
