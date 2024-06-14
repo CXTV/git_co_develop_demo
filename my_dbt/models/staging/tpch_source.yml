@@ -1,0 +1,90 @@
+version: 2
+
+sources:
+  - name: tpch
+    description: ""
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: tpch_sf1
+    tables:
+      - name: orders
+        description: ""
+        columns:
+          - name: o_orderkey
+            data_type: number
+            description: ""
+          - name: o_custkey
+            data_type: number
+            description: ""
+          - name: o_orderstatus
+            data_type: varchar
+            description: ""
+          - name: o_totalprice
+            data_type: number
+            description: ""
+          - name: o_orderdate
+            data_type: date
+            description: ""
+          - name: o_orderpriority
+            data_type: varchar
+            description: ""
+          - name: o_clerk
+            data_type: varchar
+            description: ""
+          - name: o_shippriority
+            data_type: number
+            description: ""
+          - name: o_comment
+            data_type: varchar
+            description: ""
+
+      - name: lineitem
+        description: ""
+        columns:
+          - name: l_orderkey
+            data_type: number
+            description: ""
+          - name: l_partkey
+            data_type: number
+            description: ""
+          - name: l_suppkey
+            data_type: number
+            description: ""
+          - name: l_linenumber
+            data_type: number
+            description: ""
+          - name: l_quantity
+            data_type: number
+            description: ""
+          - name: l_extendedprice
+            data_type: number
+            description: ""
+          - name: l_discount
+            data_type: number
+            description: ""
+          - name: l_tax
+            data_type: number
+            description: ""
+          - name: l_returnflag
+            data_type: varchar
+            description: ""
+          - name: l_linestatus
+            data_type: varchar
+            description: ""
+          - name: l_shipdate
+            data_type: date
+            description: ""
+          - name: l_commitdate
+            data_type: date
+            description: ""
+          - name: l_receiptdate
+            data_type: date
+            description: ""
+          - name: l_shipinstruct
+            data_type: varchar
+            description: ""
+          - name: l_shipmode
+            data_type: varchar
+            description: ""
+          - name: l_comment
+            data_type: varchar
+            description: ""
