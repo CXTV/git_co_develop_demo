@@ -37,4 +37,4 @@ with DAG(
         poke_interval= 10  #检测tpch_run_stg是否完成10s一次
     )
 
-trigger_stg >> task1 >> task2
+trigger_stg >> task1 >> task2 

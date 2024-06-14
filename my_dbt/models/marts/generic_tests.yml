@@ -7,18 +7,22 @@ models:
       - name: order_key
         data_type: number
         description: ""
-
-      - name: order_date
-        data_type: date
-        description: ""
-
-      - name: customer_key
-        data_type: number
-        description: ""
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_tpc_orders')
+              field: order_key
+              severity: warn
 
       - name: status_code
         data_type: varchar
         description: ""
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['P', 'O', 'F']
+              severity: warn
 
       - name: priority_code
         data_type: varchar
